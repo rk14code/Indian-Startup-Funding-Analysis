@@ -181,7 +181,7 @@ ___
 
 - Aggregation-based plots for funding comparison
 ___
-## 📈 Business Value
+## 🧠 Business Value
 
 - Helps investors identify high-growth sectors and cities
 
