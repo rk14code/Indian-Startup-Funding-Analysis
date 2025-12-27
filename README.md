@@ -180,7 +180,7 @@ ___
 - Bar charts for top startups, industries, sub-industries and cities
 
 - Aggregation-based plots for funding comparison
-
+___
 ## 📈 Business Value
 
 - Helps investors identify high-growth sectors and cities
@@ -192,10 +192,10 @@ ___
 - Demonstrates how clean data improves strategic decision-making
 
 - Bridges raw funding data with strategic business insights
-
+___
 ## 📌 Conclusion
 
-This project demonstrates the importance of data cleaning before analysis when working with real-world datasets.
+- This project demonstrates the importance of data cleaning before analysis when working with real-world datasets.
 By combining rigorous preprocessing with structured EDA, the analysis uncovers meaningful patterns in startup funding across time, geography, and industries.
 
-The project highlights how thoughtful exploratory analysis can transform noisy startup data into insights that support investment decisions, market understanding, and strategic planning, making it highly relevant for Data Analyst and Data Scientist roles.
+- The project highlights how thoughtful exploratory analysis can transform noisy startup data into insights that support investment decisions, market understanding, and strategic planning, making it highly relevant for Data Analyst and Data Scientist roles.
