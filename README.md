@@ -1,10 +1,10 @@
 # 🚀 Indian-Startup-Funding-Analysis (2015–2020)
 ## 📌 Project Overview
 
-This project presents a comprehensive exploratory data analysis (EDA) of the Indian startup funding ecosystem from 2015 to 2020. The objective is to understand how startup funding has evolved over time and to identify key patterns across industries, locations, funding types, investors, and startup maturity.
+This project presents a comprehensive **exploratory data analysis (EDA)** of the **Indian startup funding ecosystem** from 2015 to 2020. The objective is to understand how startup funding has evolved over time and to identify key patterns across **industries**, **locations**, **funding types**, **investors**, and **startup maturity**.
 
-A major focus of this project is real-world data cleaning and standardization, addressing inconsistencies, missing values, encoding issues, and noisy categorical attributes. After building a clean and reliable dataset, in-depth EDA and visualization techniques are applied to extract meaningful insights that reflect investor behavior and startup growth trends in India.
-
+A major focus of this project is **real-world data cleaning and standardization**, addressing inconsistencies, missing values, encoding issues, and noisy categorical attributes. After building a clean and reliable dataset, in-depth EDA and visualization techniques are applied to extract meaningful insights that reflect investor behavior and startup growth trends in India.
+___
 ## 🎯 Objectives
 
 - Clean and standardize real-world startup funding data
@@ -22,155 +22,155 @@ A major focus of this project is real-world data cleaning and standardization, a
 - Highlight startups and sectors attracting repeated and large-scale funding
 
 - Derive business-relevant insights from EDA
-
+___
 ## 📊 Dataset Description
 
 Each row represents a startup funding event in India.
 
-- Rows: 3,044
+- **Rows:** 3,044
 
-- Columns: 10
+- **Columns:** 10
 
 Key Columns:
 
-- Date – Funding date (dd/mm/yyyy)
+- **Date** – The date when the funding was provided, in the format dd/mm/yyyy
 
-- Startup Name – Name of funded startup
+- **Startup Name** – The name of the startup that received funding
 
-- Industry Vertical – Broad industry category
+- **Industry Vertical** – The industry or sector in which the startup operates, such as technology, healthcare, e-commerce, etc.
 
-- SubVertical – Specific domain/sub-sector
+- **SubVertical** – A more specific category within the industry, providing additional details about the startup's focus
 
-- City – Startup location
+- **City** – The city or location where the startup is based
 
-- Investors Name – Names of investors
+- **Investors Name** – The names of the investors or venture capital firms that provided the funding
 
-- Investment Type – Seed, Angel, Series A/B, Private Equity, etc.
+- **Investment Type** –  The type of investment, such as Seed Funding, Series A, Series B, etc.
 
-- Amount in USD → Amount funded in a particular startup (later converted to Amount in Crore Rs.)
+- **Amount in USD** → The amount of funding received by the startup, typically expressed in US dollars (later converted to Amount in Crore Rs.)
 
-- Remarks – Additional funding notes (later dropped)
-
+- **Remarks** –  Any additional remarks or notes about the funding round or the startup (later dropped)
+___
 ## 🧹 Data Cleaning & Preprocessing
 
 This project involves extensive real-world data preprocessing, including:
 
-### Data Type Corrections
+- **Data Type Corrections**
 
-- Converted date column to proper datetime formate
+  - Converted date column to proper datetime formate
 
-- Cleaned funding amounts and converted them into INR (Crores)
+  - Cleaned funding amounts and converted them into INR (Crores)
 
-### Handling Missing Values
+- **Handling Missing Values**
 
-- Dropped high-missing and low-utility columns (e.g., Remarks)
+  - Dropped high-missing and low-utility columns (e.g., Remarks)
 
-- Applied hierarchical imputation for missing funding amounts:
+  - Applied hierarchical imputation for missing funding amounts:
 
-  - Industry-level median funding
+    - Industry-level median funding
 
-  - Overall dataset median for remaining cases
+    - Overall dataset median for remaining cases
 
-### Categorical Standardization
+- **Categorical Standardization**
 
-- Standardized Startup Names (e.g., Ola, OYO, Byju’s variants)
+  - Standardized Startup Names (e.g., Ola, OYO, Byju’s variants)
 
-- Cleaned encoding issues (\xc2\xa0, \xe2\x80\x99, etc.)
+  - Cleaned encoding issues (\xc2\xa0, \xe2\x80\x99, etc.)
 
-- Normalized Industry Vertical, SubVertical, City, Investor Names
+  - Normalized Industry Vertical, SubVertical, City, Investor Names
 
-- Unified inconsistent spellings and naming conventions using correction dictionaries
+  - Unified inconsistent spellings and naming conventions using correction dictionaries
 
-### Entity-Level Consistency
+- **Entity-Level Consistency**
 
-- Grouped by Startup Name and assigned the most frequent:
+  - Grouped by Startup Name and assigned the most frequent:
 
-  - Industry
+    - Industry
 
-  - Sub-industry
+    - Sub-industry
 
-  - City
+    - City
 
-This reduced noise and improved analytical consistency.
+      This reduced noise and improved analytical consistency.
 
-### Final Clean Dataset
+- **Final Clean Dataset**
 
-- Rows: 2,914
+  - Rows: 2,914
 
-- Columns: 9
+  - Columns: 9
 
-- No missing values in critical analytical fields
-
+  - No missing values in critical analytical fields
+___
 ## 🛠️ Skills & Tools Used
 
-### Programming & Libraries
+- **Programming & Libraries**
 
-- Python: Pandas, NumPy
+  - Python: Pandas, NumPy
 
-- Visualization: Matplotlib, Seaborn
+  - Visualization: Matplotlib, Seaborn
 
-### Techniques
+- **Techniques**
 
-- Data cleaning & validation
+  - Data cleaning & validation
 
-- Encoding & text normalization
+  - Encoding & text normalization
 
-- Hierarchical median imputation
+  - Hierarchical median imputation
 
-- Group-based aggregation
+  - Group-based aggregation
 
-- Statistical summaries
+  - Statistical summaries
 
-- Business-driven EDA
-
+  - Business-driven EDA
+___
 ## 🔎 Exploratory Data Analysis (EDA) – Key Insights
-### Funding Amount Distribution
 
-- Funding amounts are highly right-skewed
+- **Funding Amount Distribution**
 
-- Majority of startups receive small to moderate funding
-- 
-- A few mega-funding deals stretch the distribution up to ~₹35,000+ crore
+  - Funding amounts are highly right-skewed
 
-- Median funding (~₹14.37 crore) better represents a typical startup than the mean
-
-### Year-wise Funding Trends
-
-- Peak funding observed in 2017 and 2019
-
-- Indicates strong investor momentum before economic slowdowns
-
-- Year-wise aggregation highlights cyclical investment behavior  
-
-### Top Startups by Funding
-
-- Startups like Flipkart, Paytm, Rapido, Ola, OYO, Swiggy, Byju’s dominate total funding
-
-- Startups like Ola, OYO, Swiggy, and Byju’s appear repeatedly, reflecting multi-round funding cycles
-
-### Industry-Level Insights
-
-- Consumer Internet, E-commerce, FinTech, Technology, Healthcare attract the most capital
+  - Majority of startups receive small to moderate funding
  
-- Followed by Technology, Finance, Healthcare, Logistics, and Fin-Tech
+  - A few mega-funding deals stretch the distribution up to ~₹35,000+ crore
 
-- Shows strong investor preference for scalable, digital-first platforms
+  - Median funding (~₹14.37 crore) better represents a typical startup than the mean
 
-### Sub-Industry Analysis
+- **Year-wise Funding Trends**
 
-- Bike Taxi, Online Marketplaces, Mobile Wallets & E-commerce lead funding
-- Online marketplaces, ride-hailing, digital payments, and logistics lead funding
+  - Peak funding observed in 2017 and 2019
 
-- Platform-based business models attract the highest capital inflow
+  - Indicates strong investor momentum before economic slowdowns
 
-### City-wise Analysis
+  - Year-wise aggregation highlights cyclical investment behavior  
 
-- Bangalore is the undisputed startup hub (highest total, max funding, and startup count)
+- **Top Startups by Funding**
 
-- Mumbai, Gurugram, and New Delhi form the next tier
+  - Startups like Flipkart, Rapido, Paytm, Ola, Oyorooms, Udaan, Snapdeal dominate total funding
 
-- Presence of US cities highlights global investor participation
+  - Startups like Ola, Paytm, Oyorooms, Swiggy, Byju’s, Urbanclap, Lendingkart and Lenskart appear repeatedly, reflecting multi-round funding cycles
 
+- **Industry-Level Insights**
+
+  - Consumer Internet, E-commerce, Technology, Finance and Logistics attract the most capital
+ 
+  - Followed by Healthcare, Hospitality and Fin-Tech
+
+  - Shows strong investor preference for scalable, digital-first platforms
+
+- **Sub-Industry Analysis**
+
+  - Bike Taxi, Online Marketplaces, Mobile Wallets & E-commerce lead funding
+
+  - Platform-based business models attract the highest capital inflow
+
+- **City-wise Analysis**
+
+  - Bangalore is the undisputed startup hub (highest total, max funding, and startup count)
+
+  - Mumbai, Gurugram, and New Delhi form the next tier
+
+  - Presence of US cities highlights global investor participation
+___
 ## 📈 Visualizations Used
 
 - Funding distribution plots (Histogram + KDE)
