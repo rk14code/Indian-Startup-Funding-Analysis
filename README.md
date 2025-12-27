@@ -34,7 +34,7 @@ Each row represents a startup funding event in India.
 Key Columns:
 
 - **Sr No** - Serial number for each entry
-- 
+   
 - **Date** – The date when the funding was provided, in the format dd/mm/yyyy
 
 - **Startup Name** – The name of the startup that received funding
